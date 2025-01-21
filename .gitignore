@@ -1,0 +1,24 @@
+# 项目排除路径
+/data/
+/failed_demo/
+/save_model/
+/figures/
+/log/
+/result/
+# Python bytecode
+*.pyc
+
+# Logs
+*.log
+
+# Virtualenv
+venv/
+
+# Build
+build/
+dist/
+__pycache__/
+
+# IDE
+.vscode/
+.idea/
