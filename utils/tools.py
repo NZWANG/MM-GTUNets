@@ -7,6 +7,7 @@ from sklearn.feature_selection import RFE
 import shutil
 import csv
 import os
+import re
 from scipy.spatial import distance
 import warnings
 
@@ -329,6 +330,27 @@ def move_files_to_main_directory(main_directory):
                 os.rmdir(dir_path)
             except OSError:
                 print(f"Directory is not empty or an error occurred: {dir_path}")
+
+def replace_non_floats(file_name):
+    # 读取文件
+    with open(file_name, 'r') as f:
+        lines = f.readlines()
+
+    # 对于每一行，将其分解为单词，尝试将每个单词转换为浮点数，如果不能，则替换为空格
+    for i in range(len(lines)):
+        words = lines[i].split()
+        for j in range(len(words)):
+            try:
+                float(words[j])  # 尝试转换
+            except ValueError:
+                words[j] = re.sub(r'\S', ' ', words[j])  # 如果不是浮点数，则替换为同等长度的空格
+
+        # 重新对单词进行组合，形成新的行，保持原有格式
+        lines[i] = ' '.join(words) + '\n'
+
+    # 将新的行写回文件
+    with open(file_name, 'w') as f:
+        f.writelines(lines)
 
 
 def print_result(opt, n_folds, accs, sens, spes, aucs, f1):

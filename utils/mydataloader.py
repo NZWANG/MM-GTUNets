@@ -3,10 +3,11 @@ import torch
 import numpy as np
 from sklearn.model_selection import StratifiedKFold, train_test_split
 from utils.tools import (get_ids, get_timeseries, get_networks, get_upper_triangle_networks, get_subject_score,
-                         ordinal_encoding, subject_connectivity, move_files_to_main_directory)
+                         ordinal_encoding, subject_connectivity, move_files_to_main_directory, replace_non_floats)
 from nilearn import datasets
 from opt import OptInit
-
+import shutil
+import glob
 
 class MyDataloader:
     def __init__(self, args, features=None, labels=None, ph_dict=None, ph_data=None):
@@ -138,6 +139,36 @@ class MyDataloader:
             connectivities.append(self.calculate_connectivity(time_series[i], self.ids[i], kind=kind))
             print(f"subject_{self.ids[i]}'s {kind} connectivity has been calculated!")
         print("all finished!")
+        connectivities = np.array(connectivities, dtype=np.float32)
+        return connectivities
+
+    def process_adhd200(self, kind='correlation', filter=True):
+        data_folder = self.args.data_folder
+        altas = self.args.atlas
+        if filter:
+            prefix = 'sfnwmrda'
+        else:
+            prefix = 'snwmrda'
+
+        self.ids = self.get_subject_IDs()
+
+        for id_ in self.ids:
+            file_pattern = os.path.join(data_folder, f'*/{prefix}{id_}*rest_1_{altas}_TCs.1D')
+            files = glob.glob(file_pattern)
+
+            for file_name in files:
+                replace_non_floats(file_name)
+                shutil.move(file_name, os.path.join(data_folder, f'{id_}_rois_{altas}.1D'))
+                print(f"{file_name} has processed!")
+
+                subdir_name = os.path.dirname(file_name)
+                shutil.rmtree(subdir_name)
+
+        time_series = self.get_timeseries(self.ids)
+        connectivities = []
+        for i in range(len(self.ids)):
+            connectivities.append(self.calculate_connectivity(time_series[i], self.ids[i], kind=kind))
+
         connectivities = np.array(connectivities, dtype=np.float32)
         return connectivities
 

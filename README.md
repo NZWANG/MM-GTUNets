@@ -101,3 +101,7 @@ Classification Task ( Default dataset is ABIDE )
 ```shell
 python train_mm_gtunets.py --train 0
 ```
+## Citation
+If you find our codes helpful, please star our project and cite our following papers: 
+
+Luhui Cai, Weiming Zeng, Hongyu Chen, Hua Zhang, Yueyang Li, Yu Feng, Hongjie Yan, Lingbin Bian, Wai Ting Siok, Nizhuan Wang. (2024). MM-GTUNets: Unified Multi-Modal Graph Deep Learning for Brain Disorders Prediction. arXiv preprint arXiv:2406.14455. https://arxiv.org/abs/2406.14455.
