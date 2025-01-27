@@ -36,7 +36,10 @@ tensorboard-data-server~=0.7.1
 tensorboardX~=2.6
 ```
 
-
+Alternatively, you can choose to run the following code to install the required environment:
+```shell
+pip install -r requirements.txt
+```
 
 ## Configuration
 
