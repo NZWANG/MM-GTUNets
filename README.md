@@ -18,22 +18,15 @@ Some major requirements are given below:
 
 ```python
 numpy~=1.26.2
-networkx~=2.7.1
 torch~=1.10.0
 scikit-learn~=1.2.2
 scipy~=1.10.1
-matplotlib~=3.5.0
 torch-cluster~=1.6.0
 torch-geometric~=2.0.4
 torch-scatter~=2.0.9
 torch-sparse~=0.6.13
 torch-spline-conv~=1.2.1
-networkx~=2.8.8
-nibabel~=5.1.0
 nilearn~=0.10.1
-tensorboard~=2.13.0
-tensorboard-data-server~=0.7.1
-tensorboardX~=2.6
 ```
 
 Alternatively, you can choose to run the following code to install the required environment:
