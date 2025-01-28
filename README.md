@@ -1,5 +1,6 @@
 # MM-GTUNets
-
+This repository is the official PyTorch implementation of "MM-GTUNets: Unified Multi-Modal Graph Deep
+Learning for Brain Disorders Prediction".
 
 ![MM-GTUNets](./MM_GTUNets.png)
 
@@ -9,7 +10,6 @@
 0. [Data](#data)
 0. [Training](#train)
 0. [Testing](#testing)
-
 
 ## Installation
 Code developed and tested in Python 3.9.0 using PyTorch 2.0.0. Please refer to their official websites for installation and setup.
@@ -100,4 +100,11 @@ python train_mm_gtunets.py --train 0
 ## Citation
 If you find our codes helpful, please star our project and cite our following papers: 
 
-Luhui Cai, Weiming Zeng, Hongyu Chen, Hua Zhang, Yueyang Li, Yu Feng, Hongjie Yan, Lingbin Bian, Wai Ting Siok, Nizhuan Wang. (2024). MM-GTUNets: Unified Multi-Modal Graph Deep Learning for Brain Disorders Prediction. arXiv preprint arXiv:2406.14455. https://arxiv.org/abs/2406.14455.
+```
+@article{cai2024mm,
+  title={MM-GTUNets: Unified Multi-Modal Graph Deep Learning for Brain Disorders Prediction},
+  author={Cai, Luhui and Zeng, Weiming and Chen, Hongyu and Zhang, Hua and Li, Yueyang and Yan, Hongjie and Bian, Lingbin and Wang, Nizhuan},
+  journal={arXiv preprint arXiv:2406.14455},
+  year={2024}
+}
+```
