@@ -18,7 +18,7 @@ Some major requirements are given below:
 
 ```python
 numpy~=1.26.2
-torch~=1.10.0
+torch~=2.0.0
 scikit-learn~=1.2.2
 scipy~=1.10.1
 torch-cluster~=1.6.0
