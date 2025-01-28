@@ -18,9 +18,9 @@ Some major requirements are given below:
 
 ```python
 numpy~=1.26.2
-torch~=2.0.0
 scikit-learn~=1.2.2
 scipy~=1.10.1
+torch~=2.0.0
 torch-cluster~=1.6.0
 torch-geometric~=2.0.4
 torch-scatter~=2.0.9
