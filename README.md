@@ -8,8 +8,9 @@ Learning for Brain Disorders Prediction".
 0. [Installation](#installation)
 0. [Configuration](#configurationn)
 0. [Data](#data)
-0. [Training](#train)
+0. [Training](#training)
 0. [Testing](#testing)
+0. [Citation](#citation)
 
 ## Installation
 Code developed and tested in Python 3.9.0 using PyTorch 2.0.0. Please refer to their official websites for installation and setup.
