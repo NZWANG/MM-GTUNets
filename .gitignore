@@ -1,5 +1,5 @@
 # 项目排除路径
-/data/
+#/data
 /failed_demo/
 /save_model/
 /figures/
