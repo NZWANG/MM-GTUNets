@@ -98,10 +98,11 @@ python train_mm_gtunets.py --train 0
 If you find our codes helpful, please star our project and cite our following papers: 
 
 ```
-@article{cai2024mm,
-  title={MM-GTUNets: Unified Multi-Modal Graph Deep Learning for Brain Disorders Prediction},
-  author={Cai, Luhui and Zeng, Weiming and Chen, Hongyu and Zhang, Hua and Li, Yueyang and Yan, Hongjie and Bian, Lingbin and Wang, Nizhuan},
-  journal={arXiv preprint arXiv:2406.14455},
-  year={2024}
+@article{cai2025mm,
+  title={MM-GTUNets: Unified multi-modal graph deep learning for brain disorders prediction},
+  author={Cai, Luhui and Zeng, Weiming and Chen, Hongyu and Zhang, Hua and Li, Yueyang and Feng, Yu and Yan, Hongjie and Bian, Lingbin and Siok, Wai Ting and Wang, Nizhuan},
+  journal={IEEE Transactions on Medical Imaging},
+  year={2025},
+  publisher={IEEE}
 }
 ```
